@@ -49,6 +49,8 @@ public final class ContentTypeUtils {
             case "xml": return MediaType.TEXT_XML_VALUE;
             case "csv": return MediaType.TEXT_CSV_VALUE;
             case "md": return MediaType.TEXT_MARKDOWN_VALUE;
+            case "vcf": return MediaType.TEXT_VCARD_VALUE;
+            case "vcard": return MediaType.TEXT_VCARD_VALUE;
             case "png": return MediaType.IMAGE_PNG_VALUE;
             case "jpg": return MediaType.IMAGE_JPEG_VALUE;
             case "jpeg": return MediaType.IMAGE_JPEG_VALUE;

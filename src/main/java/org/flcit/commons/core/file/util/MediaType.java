@@ -31,6 +31,7 @@ public final class MediaType {
     public static final String TEXT_PLAIN_VALUE = "text/plain";
     public static final String TEXT_HTML_VALUE = "text/html";
     public static final String TEXT_XML_VALUE = "text/xml";
+    public static final String TEXT_VCARD_VALUE = "text/vcard";
     public static final String TEXT_MARKDOWN_VALUE = "text/markdown";
     public static final String IMAGE_PNG_VALUE = "image/png";
     public static final String IMAGE_JPEG_VALUE = "image/jpeg";

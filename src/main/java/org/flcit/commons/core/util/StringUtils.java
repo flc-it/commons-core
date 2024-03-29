@@ -21,6 +21,8 @@ import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.nio.charset.CodingErrorAction;
 import java.nio.charset.UnmappableCharacterException;
+import java.util.AbstractMap.SimpleEntry;
+import java.util.Map.Entry;
 import java.util.Optional;
 
 /**
@@ -43,6 +45,10 @@ public final class StringUtils {
     /**
      * 
      */
+    public static final String SPACE = " ";
+    /**
+     * 
+     */
     public static final String CRLF = "\r\n";
     /**
      * 
@@ -56,6 +62,10 @@ public final class StringUtils {
      * 
      */
     public static final String COMMA = ",";
+    /**
+     * 
+     */
+    public static final String COLON = ":";
     /**
      * 
      */
@@ -708,6 +718,19 @@ public final class StringUtils {
      */
     public static String suffix(String value, String suffix) {
         return value == null || value.endsWith(suffix) ? value : value + suffix;
+    }
+
+    /**
+     * @param value
+     * @param separator
+     * @return
+     */
+    public static Entry<String, String> splitEntry(String value, String separator) {
+        if (value == null) {
+            return null;
+        }
+        final int index = value.indexOf(separator);
+        return index == -1 ? null : new SimpleEntry<>(value.substring(0, index), value.substring(index + separator.length()));
     }
 
 }
