@@ -16,6 +16,14 @@
 
 package org.flcit.commons.core.util;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -33,7 +41,21 @@ public final class PropertyUtils {
      * @return
      */
     public static Boolean getBoolean(Properties properties, String property) {
-        return BooleanUtils.convert(properties.get(property));
+        return toBoolean(properties.get(property));
+    }
+
+    /**
+     * @param properties
+     * @param property
+     * @param defaultValue
+     * @return
+     */
+    public static Boolean getBoolean(Properties properties, String property, Boolean defaultValue) {
+        return toBoolean(properties.getOrDefault(property, defaultValue));
+    }
+
+    private static Boolean toBoolean(Object value) {
+        return BooleanUtils.convert(value);
     }
 
     /**
@@ -44,7 +66,124 @@ public final class PropertyUtils {
      * @return
      */
     public static <T extends Number> T getNumber(Properties properties, String property, Class<T> classType) {
-        return NumberUtils.convert(properties.get(property), classType);
+        return toNumber(properties.get(property), classType);
+    }
+
+    /**
+     * @param <T>
+     * @param properties
+     * @param property
+     * @param defaultValue
+     * @param classType
+     * @return
+     */
+    public static <T extends Number> T getNumber(Properties properties, String property, T defaultValue, Class<T> classType) {
+        return toNumber(properties.getOrDefault(property, defaultValue), classType);
+    }
+
+    private static <T extends Number> T toNumber(Object value, Class<T> classType) {
+        return NumberUtils.convert(value, classType);
+    }
+
+    /**
+     * @param properties
+     * @param property
+     * @return
+     */
+    public static List<String> getStringList(Properties properties, String property) {
+        return getStringList(properties, property, null);
+    }
+
+    /**
+     * @param properties
+     * @param property
+     * @param defaultValue
+     * @return
+     */
+    public static List<String> getStringList(Properties properties, String property, List<String> defaultValue) {
+        return toList(properties.getProperty(property), defaultValue);
+    }
+
+    /**
+     * @param value
+     * @return
+     */
+    public static List<String> toList(String value) {
+        return toList(value, null);
+    }
+
+    /**
+     * @param value
+     * @param defaultValue
+     * @return
+     */
+    public static List<String> toList(String value, List<String> defaultValue) {
+        return value != null ? Arrays.asList(toArray(value)) : defaultValue;
+    }
+
+    /**
+     * @param properties
+     * @param property
+     * @return
+     */
+    public static String[] getStringArray(Properties properties, String property) {
+        return getStringArray(properties, property, null);
+    }
+
+    /**
+     * @param properties
+     * @param property
+     * @param defaultValue
+     * @return
+     */
+    public static String[] getStringArray(Properties properties, String property, String[] defaultValue) {
+        return toArray(properties.getProperty(property), defaultValue);
+    }
+
+    private static String[] toArray(String value) {
+        return toArray(value, null);
+    }
+
+    /**
+     * @param value
+     * @param defaultValue
+     * @return
+     */
+    private static String[] toArray(String value, String[] defaultValue) {
+        return value != null ? value.split(StringUtils.COMMA) : defaultValue;
+    }
+
+    /**
+     * @param path
+     * @return
+     * @throws IOException
+     */
+    public static Map<String, String> load(Path path) throws IOException {
+        try (InputStream inputStream = Files.newInputStream(path)) {
+            return load(inputStream);
+        }
+    }
+
+    /**
+     * @param inputStream
+     * @return
+     * @throws IOException
+     */
+    @SuppressWarnings("java:S1168")
+    public static Map<String, String> load(InputStream inputStream) throws IOException {
+        if (inputStream == null) {
+            return null;
+        }
+        final Properties properties = new Properties();
+        properties.load(inputStream);
+        if (properties.isEmpty()) {
+            return null;
+        }
+        final Map<String, String> propertyMap = new HashMap<>(properties.size());
+        for (String propertyName : properties.stringPropertyNames()) {
+            propertyMap.put(propertyName, properties.getProperty(propertyName));
+        }
+        return propertyMap;
     }
 
 }
