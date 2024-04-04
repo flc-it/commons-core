@@ -216,6 +216,26 @@ public final class NumberUtils {
         }
     }
 
+    /**
+     * @param <T>
+     * @param value
+     * @param classType
+     * @return
+     */
+    @SuppressWarnings("unchecked")
+    public static <T extends Number> T convert(Object value, Class<T> classType) {
+        if (value == null) {
+            return null;
+        }
+        if (classType.getClass().isAssignableFrom(value.getClass())) {
+            return (T) value;
+        }
+        if (Number.class.isAssignableFrom(value.getClass()) ) {
+            return convert((Number) value, classType);
+        }
+        return convertIndependant(value.toString(), classType);
+    }
+
     private static boolean isHexNumber(String value) {
         int index = (value.startsWith("-") ? 1 : 0);
         return (value.startsWith("0x", index) || value.startsWith("0X", index) || value.startsWith("#", index));

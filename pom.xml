@@ -60,7 +60,7 @@
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <!-- External dependency version -->
+        <!-- External dependencies version -->
 
         <!-- surefire -->
         <surefire.outputDir>${project.build.directory}/surefire-reports</surefire.outputDir>

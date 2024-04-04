@@ -116,6 +116,21 @@ public final class BooleanUtils {
      * @return
      */
     @SuppressWarnings("java:S2447")
+    public static Boolean convert(Object value) {
+        if (value == null) {
+            return null;
+        }
+        if (value instanceof Boolean) {
+            return (Boolean) value;
+        }
+        return parse(value.toString());
+    }
+
+    /**
+     * @param value
+     * @return
+     */
+    @SuppressWarnings("java:S2447")
     public static Boolean parse(String value) {
         if (!StringUtils.hasLength(value)) {
             return null;

@@ -33,7 +33,7 @@ public final class SingleTaskThreadExecutor implements Executor {
 
     /**
      * Executes the given command at some time in the future.
-     * <p>ExecutorService & Single Thread Pool is immediately shutdown after the single task.
+     * <p>ExecutorService and Single Thread Pool is immediately shutdown after the single task.
      *
      * @param command the runnable task
      * @throws RejectedExecutionException if this task cannot be
