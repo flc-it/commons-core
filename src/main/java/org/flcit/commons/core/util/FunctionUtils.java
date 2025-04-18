@@ -132,7 +132,15 @@ public final class FunctionUtils {
      * @param consumer
      */
     public static <T> void consumeIfNotNull(Supplier<T> supplier, Consumer<T> consumer) {
-        final T value = supplier.get();
+        consumeIfNotNull(supplier.get(), consumer);
+    }
+
+    /**
+     * @param <T>
+     * @param value
+     * @param consumer
+     */
+    public static <T> void consumeIfNotNull(T value, Consumer<T> consumer) {
         if (value != null) {
             consumer.accept(value);
         }
