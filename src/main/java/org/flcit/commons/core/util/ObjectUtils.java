@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ObjectUtils {
@@ -42,8 +42,8 @@ public final class ObjectUtils {
         if (obj instanceof Optional) {
             return !((Optional<?>) obj).isPresent();
         }
-        if (obj instanceof CharSequence) {
-            return ((CharSequence) obj).length() == 0;
+        if (obj instanceof CharSequence charSequence) {
+            return charSequence.isEmpty();
         }
         if (obj.getClass().isArray()) {
             return Array.getLength(obj) == 0;

@@ -27,7 +27,7 @@ import java.util.function.Predicate;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ArrayUtils {
@@ -214,7 +214,7 @@ public final class ArrayUtils {
     private static char[] fromStringChar(String[] values) {
         final char[] array = new char[values.length];
         for (int i = 0; i < values.length; i++) {
-            array[i] = values[i].length() > 0 ? values[i].charAt(0) : Character.MIN_VALUE;
+            array[i] = values[i].isEmpty() ? values[i].charAt(0) : Character.MIN_VALUE;
         }
         return array;
     }
@@ -322,22 +322,22 @@ public final class ArrayUtils {
      * @return
      */
     public static Object[] toObjectArray(Object objectArray) {
-        if (objectArray instanceof boolean[]) {
-            return toObjectArray((boolean[]) objectArray);
-        } else if (objectArray instanceof byte[]) {
-            return toObjectArray((byte[]) objectArray);
-        } else if (objectArray instanceof short[]) {
-            return toObjectArray((short[]) objectArray);
-        } else if (objectArray instanceof int[]) {
-            return toObjectArray((int[]) objectArray);
-        } else if (objectArray instanceof long[]) {
-            return toObjectArray((long[]) objectArray);
-        } else if (objectArray instanceof float[]) {
-            return toObjectArray((float[]) objectArray);
-        } else if (objectArray instanceof double[]) {
-            return toObjectArray((double[]) objectArray);
-        } else if (objectArray instanceof char[]) {
-            return toObjectArray((char[]) objectArray);
+        if (objectArray instanceof boolean[] booleanArray) {
+            return toObjectArray(booleanArray);
+        } else if (objectArray instanceof byte[] byteArray) {
+            return toObjectArray(byteArray);
+        } else if (objectArray instanceof short[] shortArray) {
+            return toObjectArray(shortArray);
+        } else if (objectArray instanceof int[] intArray) {
+            return toObjectArray(intArray);
+        } else if (objectArray instanceof long[] longArray) {
+            return toObjectArray(longArray);
+        } else if (objectArray instanceof float[] floatArray) {
+            return toObjectArray(floatArray);
+        } else if (objectArray instanceof double[] doubleArray) {
+            return toObjectArray(doubleArray);
+        } else if (objectArray instanceof char[] charArray) {
+            return toObjectArray(charArray);
         } else {
             return toObjectArray((Object[]) objectArray);
         }

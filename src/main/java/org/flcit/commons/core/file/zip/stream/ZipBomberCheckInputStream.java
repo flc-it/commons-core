@@ -26,7 +26,7 @@ import org.flcit.commons.core.file.zip.exception.ZipBomberException;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class ZipBomberCheckInputStream extends ZipInputStream {

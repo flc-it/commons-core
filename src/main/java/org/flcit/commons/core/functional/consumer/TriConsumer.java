@@ -22,7 +22,7 @@ import java.util.Objects;
  * @param <T>
  * @param <U>
  * @param <V>
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 @FunctionalInterface

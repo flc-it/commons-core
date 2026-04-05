@@ -20,7 +20,7 @@ import org.flcit.commons.core.exception.BasicRuntimeException;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class ZipBomberException extends BasicRuntimeException {

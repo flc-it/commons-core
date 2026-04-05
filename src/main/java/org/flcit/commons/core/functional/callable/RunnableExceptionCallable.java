@@ -22,7 +22,7 @@ import org.flcit.commons.core.functional.runnable.RunnableException;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class RunnableExceptionCallable implements Callable<Void> {

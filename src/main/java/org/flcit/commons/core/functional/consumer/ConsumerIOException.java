@@ -21,7 +21,7 @@ import java.util.Objects;
 
 /**
  * @param <T>
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 @FunctionalInterface

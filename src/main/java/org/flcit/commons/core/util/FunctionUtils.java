@@ -24,7 +24,7 @@ import java.util.function.Supplier;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class FunctionUtils {

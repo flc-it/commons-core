@@ -20,7 +20,7 @@ import java.util.concurrent.Callable;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class RunnableCallable implements Callable<Void> {

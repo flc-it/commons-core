@@ -18,7 +18,7 @@ package org.flcit.commons.core.util;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class SystemPropertyUtils {
@@ -32,8 +32,19 @@ public final class SystemPropertyUtils {
      * @return
      */
     public static <T extends Enum<T>> T getEnum(String property, Class<T> targetType) {
+        return getEnum(property, null, targetType);
+    }
+
+    /**
+     * @param <T>
+     * @param property
+     * @param targetType
+     * @param defaultIfNotExists
+     * @return
+     */
+    public static <T extends Enum<T>> T getEnum(String property, T defaultIfNotExists, Class<T> targetType) {
         final String value = get(property);
-        return !StringUtils.hasLength(value) ? null : Enum.valueOf(targetType, value);
+        return !StringUtils.hasLength(value) ? defaultIfNotExists : Enum.valueOf(targetType, value);
     }
 
     /**
@@ -42,6 +53,18 @@ public final class SystemPropertyUtils {
      */
     public static String get(String property) {
         return get(property, null);
+    }
+
+    /**
+     * @param property
+     * @return
+     */
+    public static String getRequired(String property) {
+        final String value = get(property);
+        if (value == null) {
+            throw new IllegalStateException(String.format("Property %s not found", property));
+        }
+        return value;
     }
 
     /**

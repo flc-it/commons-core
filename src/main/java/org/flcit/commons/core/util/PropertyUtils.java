@@ -28,7 +28,7 @@ import java.util.Properties;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class PropertyUtils {

@@ -18,7 +18,7 @@ package org.flcit.commons.core.util;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class Assert {

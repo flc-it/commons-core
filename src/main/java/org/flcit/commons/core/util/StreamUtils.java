@@ -22,7 +22,7 @@ import java.io.OutputStream;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class StreamUtils {

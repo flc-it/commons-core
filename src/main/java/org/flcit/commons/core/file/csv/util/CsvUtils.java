@@ -30,7 +30,7 @@ import org.flcit.commons.core.util.ArrayUtils;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class CsvUtils {

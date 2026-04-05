@@ -20,7 +20,7 @@ import java.math.BigInteger;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class MathUtils {

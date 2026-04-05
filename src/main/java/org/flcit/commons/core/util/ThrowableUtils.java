@@ -18,7 +18,7 @@ package org.flcit.commons.core.util;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ThrowableUtils {
@@ -38,7 +38,7 @@ public final class ThrowableUtils {
             return;
         }
         try {
-            throw StringUtils.hasLength(message) ? throwable.getDeclaredConstructor(String.class).newInstance(message) : throwable.newInstance();
+            throw StringUtils.hasLength(message) ? throwable.getDeclaredConstructor(String.class).newInstance(message) : throwable.getDeclaredConstructor().newInstance();
         } catch (ReflectiveOperationException e) {
             throw new IllegalStateException(message, e);
         }

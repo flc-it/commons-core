@@ -29,7 +29,7 @@ import org.flcit.commons.core.executor.SingleTaskThreadExecutor;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class AsyncUtils {

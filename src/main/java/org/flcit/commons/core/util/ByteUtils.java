@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ByteUtils {

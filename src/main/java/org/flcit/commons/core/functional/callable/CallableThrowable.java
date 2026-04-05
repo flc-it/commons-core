@@ -20,7 +20,7 @@ import java.util.concurrent.Callable;
 
 /**
  * @param <T>
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class CallableThrowable<T> implements Callable<T> {

@@ -30,7 +30,7 @@ import org.flcit.commons.core.util.StringUtils;
 @Target(FIELD)
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public @interface Column {

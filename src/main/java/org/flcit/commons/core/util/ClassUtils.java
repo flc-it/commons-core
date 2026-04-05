@@ -18,11 +18,10 @@ package org.flcit.commons.core.util;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ClassUtils {
@@ -45,7 +44,7 @@ public final class ClassUtils {
      * @return
      */
     public static <T> List<Class<T>> listSafe(Collection<T> values) {
-        return CollectionUtils.isEmpty(values) ? values.stream().map(ClassUtils::getSafe).collect(Collectors.toList()) : null;
+        return CollectionUtils.isEmpty(values) ? values.stream().map(ClassUtils::getSafe).toList() : null;
     }
 
     /**

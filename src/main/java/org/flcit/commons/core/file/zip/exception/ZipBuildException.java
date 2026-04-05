@@ -18,7 +18,7 @@ package org.flcit.commons.core.file.zip.exception;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class ZipBuildException extends RuntimeException {

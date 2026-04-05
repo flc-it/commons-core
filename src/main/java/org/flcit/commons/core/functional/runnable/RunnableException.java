@@ -18,7 +18,7 @@ package org.flcit.commons.core.functional.runnable;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 @FunctionalInterface

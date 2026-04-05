@@ -20,7 +20,7 @@ import java.util.function.Supplier;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class BooleanUtils {
@@ -120,8 +120,8 @@ public final class BooleanUtils {
         if (value == null) {
             return null;
         }
-        if (value instanceof Boolean) {
-            return (Boolean) value;
+        if (value instanceof Boolean bool) {
+            return bool;
         }
         return parse(value.toString());
     }

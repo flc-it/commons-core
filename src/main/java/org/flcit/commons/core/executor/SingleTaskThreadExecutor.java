@@ -23,7 +23,7 @@ import java.util.concurrent.RejectedExecutionException;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class SingleTaskThreadExecutor implements Executor {

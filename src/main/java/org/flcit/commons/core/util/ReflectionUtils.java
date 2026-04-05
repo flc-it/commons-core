@@ -31,7 +31,7 @@ import java.util.Map;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ReflectionUtils {
@@ -249,18 +249,9 @@ public final class ReflectionUtils {
 
     private static Field makeAccessible(final Field field) {
         if (field != null) {
-            makeAccessibleIntern(field);
+            field.trySetAccessible();
         }
         return field;
-    }
-
-    @SuppressWarnings("java:S3011")
-    private static void makeAccessibleIntern(Field field) {
-        if ((!Modifier.isPublic(field.getModifiers()) ||
-                !Modifier.isPublic(field.getDeclaringClass().getModifiers()) ||
-                Modifier.isFinal(field.getModifiers())) && !field.isAccessible()) {
-            field.setAccessible(true);
-        }
     }
 
     /**
@@ -374,8 +365,8 @@ public final class ReflectionUtils {
         } catch (IllegalAccessException e) {
             throw new IllegalStateException(ACCESS_ERROR_MESSAGE + e.getMessage());
         } catch (InvocationTargetException e) {
-            if (e.getTargetException() instanceof RuntimeException) {
-                throw (RuntimeException) e.getTargetException();
+            if (e.getTargetException() instanceof RuntimeException runtimeException) {
+                throw runtimeException;
             }
             throw new UndeclaredThrowableException(e);
         }

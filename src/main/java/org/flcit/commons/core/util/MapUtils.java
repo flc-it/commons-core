@@ -29,7 +29,7 @@ import java.util.function.BiPredicate;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class MapUtils {

@@ -26,7 +26,7 @@ import org.flcit.commons.core.util.CollectionUtils;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class InputStreamSkypByteOrderMark extends InputStream {

@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 @Documented

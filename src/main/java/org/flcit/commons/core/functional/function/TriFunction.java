@@ -24,7 +24,7 @@ import java.util.function.Function;
  * @param <U>
  * @param <Z>
  * @param <R>
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 @FunctionalInterface

@@ -27,7 +27,7 @@ import org.flcit.commons.core.util.CollectionUtils;
 
 /**
  * @param <T>
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public class StreamingIterable<T> implements Iterable<T> {

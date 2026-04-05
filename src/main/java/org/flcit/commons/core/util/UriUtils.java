@@ -22,7 +22,7 @@ import java.util.regex.Pattern;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class UriUtils {

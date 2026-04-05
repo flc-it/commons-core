@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 
- * @since 
+ * @since 1.0.0
  * @author Florian Lestic
  */
 public final class ThreadUtils {
