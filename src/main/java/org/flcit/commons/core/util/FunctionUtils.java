@@ -204,4 +204,18 @@ public final class FunctionUtils {
         return defaultSupplier != null ? defaultSupplier.get() : null;
     }
 
+    @SafeVarargs
+    public static <T> boolean consumeFirstNotNull(Consumer<T> setter, T... values) {
+        if (ArrayUtils.isEmpty(values)) {
+            return false;
+        }
+        for (T value: values) {
+            if (value != null) {
+                setter.accept(value);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
