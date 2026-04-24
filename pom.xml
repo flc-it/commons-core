@@ -30,8 +30,8 @@
 
     <!-- Paramètres gestionnaire de version -->
     <scm>
-        <connection>scm:git:git://github.com/flc-it/commons-core.git</connection>
-        <developerConnection>scm:git:ssh://github.com/flc-it/commons-core.git</developerConnection>
+        <connection>scm:git:git@github.com:flc-it/commons-core.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/flc-it/commons-core.git</developerConnection>
         <url>https://github.com/flc-it/commons-core</url>
         <tag>HEAD</tag>
     </scm>
