@@ -4,7 +4,7 @@
 
     <groupId>org.flcit.commons</groupId>
     <artifactId>commons-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>commons-core</name>
@@ -33,7 +33,7 @@
         <connection>scm:git:git@github.com:flc-it/commons-core.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/flc-it/commons-core.git</developerConnection>
         <url>https://github.com/flc-it/commons-core</url>
-        <tag>HEAD</tag>
+        <tag>commons-core-1.0.0</tag>
     </scm>
 
     <!-- Paramètres gestionnaire de ticket -->
