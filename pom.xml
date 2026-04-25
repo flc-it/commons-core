@@ -7,7 +7,7 @@
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>commons-core</name>
+    <name>${project.artifactId}</name>
     <description>Librairie pour les classes commons Java</description>
     <url>https://github.com/flc-it/commons-core</url>
 
@@ -122,9 +122,9 @@
             </plugin>
 
             <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-site-plugin</artifactId>
-               <version>3.21.0</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.21.0</version>
             </plugin>
 
             <plugin>
@@ -166,33 +166,33 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <reportSets>
-                  <reportSet>
-                    <reports>
-                      <report>javadoc-no-fork</report>
-                    </reports>
-                  </reportSet>
+                    <reportSet>
+                        <reports>
+                            <report>javadoc-no-fork</report>
+                        </reports>
+                    </reportSet>
                 </reportSets>
-              </plugin>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <reportSets>
-                  <reportSet>
-                    <reports>
-                      <report>report</report>
-                    </reports>
-                  </reportSet>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
                 </reportSets>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <reportSets>
-                  <reportSet>
-                    <reports>
-                      <report>report</report>
-                    </reports>
-                  </reportSet>
+                    <reportSet>
+                        <reports>
+                            <report>report</report>
+                        </reports>
+                    </reportSet>
                 </reportSets>
             </plugin>
         </plugins>
