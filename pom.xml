@@ -118,7 +118,6 @@
                 <extensions>true</extensions>
                 <configuration>
                     <autoPublish>true</autoPublish>
-                    <waitUntil>published</waitUntil>
                 </configuration>
             </plugin>
 
